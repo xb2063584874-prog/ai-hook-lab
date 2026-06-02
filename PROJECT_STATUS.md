@@ -6,8 +6,9 @@
 
 | 维度 | 状态 |
 |------|------|
-| 功能开发 | ✅ 核心功能完成 |
+| 功能开发 | ✅ 核心 + 手势粒子页面 |
 | 本地开发 | ✅ `npm run dev` 正常 |
+| 构建 | ✅ `npm run build` 通过 |
 | Vercel 部署 | ✅ 已部署但国内无法访问 |
 | CloudBase 部署 | ⏳ 待执行 |
 | Git 推送 | ✅ GitHub 同步 |
@@ -28,14 +29,19 @@
 - [x] 中文字体栈（PingFang SC / Noto Sans SC / Microsoft YaHei）
 - [x] GitHub 仓库推送
 - [x] Vercel 一键部署
+- [x] **`/particles` 手势粒子页面** — MediaPipe Hands + Canvas 2D 粒子系统
+- [x] **摄像头手势交互**：张开扩散 / 握拳聚拢 / 挥手波纹 / 双手双引力
+- [x] **摄像头被拒自动降级为鼠标模式**
+- [x] **移动端适配**（触屏支持 + 粒子数自适应）
+- [x] 项目文档：CLAUDE.md / PROJECT_README.md / PROJECT_STATUS.md / SESSION_RECOVERY.md
 
 ## Pending
 
 - [ ] **CloudBase CloudRun 部署** — 解决国内微信/浏览器访问问题
 - [ ] 创建 Dockerfile
-- [ ] 移动端响应式适配
+- [ ] 移动端响应式适配（主页面三栏布局）
 - [ ] 服务端图片分析缓存（当前仅前端 localStorage）
 
 ## Blockers
 
-- CloudBase 部署方案确认：需要在 CloudRun（容器）和静态托管+SCF 之间选择
+- CloudBase 部署方案确认：CloudRun（容器）方案已确认，需要创建 Dockerfile + 执行部署
